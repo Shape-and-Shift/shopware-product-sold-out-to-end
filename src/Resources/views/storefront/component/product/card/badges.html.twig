@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/component/product/card/badges.html.twig' %}
+
+{% block component_product_badges_new %}
+    {{ parent() }}
+
+    {% if product.stock == 0 and product.isCloseout == true %}
+        <div>
+            <span class="badge badge-danger badge-sold-out">{{ "sas.listing.boxLabelSoldOut"|trans|sw_sanitize }}</span>
+        </div>
+    {% endif %}
+{% endblock %}
