@@ -100,7 +100,9 @@ class ProductListingLoaderSubscriber implements EventSubscriberInterface
 
         $criteria = Criteria::createFrom($result->getCriteria());
         $criteria->setLimit($limitSoldOutThisPage);
-        $criteria->setOffset($result->getPage() * $result->getLimit() - $totalNotSoldOutProduct - $limitSoldOutThisPage);
+        $offset = $result->getPage() * $result->getLimit() - $totalNotSoldOutProduct - $limitSoldOutThisPage;
+
+        $criteria->setOffset($offset > 0 ? $offset : 0);
         $criteria->resetPostFilters();
         $criteria->resetAggregations();
 
