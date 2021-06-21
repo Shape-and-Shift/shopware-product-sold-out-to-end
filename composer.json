@@ -2,7 +2,7 @@
     "name": "sas/product-sold-out-to-end",
     "description": "Sold out products always to the end of the listing",
     "type": "shopware-platform-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "authors":[
         {
@@ -11,6 +11,9 @@
             "homepage":"https://shapeandshift.dev"
         }
     ],
+    "require":{
+        "shopware/core": "~6.4.0"
+    },
     "autoload": {
         "psr-4": {
             "SasProductSoldOutToEnd\\": "src/"
