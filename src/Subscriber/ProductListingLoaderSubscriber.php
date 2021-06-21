@@ -1,4 +1,5 @@
 <?php declare(strict_types=1);
+
 namespace SasProductSoldOutToEnd\Subscriber;
 
 use Shopware\Core\Content\Product\Events\ProductListingCriteriaEvent;
@@ -46,25 +47,27 @@ class ProductListingLoaderSubscriber implements EventSubscriberInterface
         $notOutOfStockFilter = $this->getProductNotSoldOutCriteria();
 
         $notOutOfStockFilter->assign([
-            'name' => self::NOT_OUT_OF_STOCK_FILTER_NAME
+            'name' => self::NOT_OUT_OF_STOCK_FILTER_NAME,
         ]);
 
-        $criteria->addAggregation(new FilterAggregation(
-                'product-sold-out',
-                new CountAggregation(self::COUNT_PRODUCT_SOLD_OUT_AGGREGATION, 'id'),
-                [
-                    $this->getProductSoldOutCriteria()
-                ]
-            )
+        $criteria->addAggregation(
+            new FilterAggregation(
+            'product-sold-out',
+            new CountAggregation(self::COUNT_PRODUCT_SOLD_OUT_AGGREGATION, 'id'),
+            [
+                $this->getProductSoldOutCriteria(),
+            ]
+        )
         );
 
-        $criteria->addAggregation(new FilterAggregation(
-                'product-not-sold-out',
-                new CountAggregation(self::COUNT_PRODUCT_NOT_SOLD_OUT_AGGREGATION, 'id'),
-                [
-                    $this->getProductNotSoldOutCriteria()
-                ]
-            )
+        $criteria->addAggregation(
+            new FilterAggregation(
+            'product-not-sold-out',
+            new CountAggregation(self::COUNT_PRODUCT_NOT_SOLD_OUT_AGGREGATION, 'id'),
+            [
+                $this->getProductNotSoldOutCriteria(),
+            ]
+        )
         );
 
         $criteria->addPostFilter($notOutOfStockFilter);
@@ -116,7 +119,7 @@ class ProductListingLoaderSubscriber implements EventSubscriberInterface
         $result->getEntities()->merge($outOfStock->getEntities());
         $result->merge($outOfStock->getEntities());
         $result->assign([
-            'total' => $totalNotSoldOutProduct + $countSoldOutProduct
+            'total' => $totalNotSoldOutProduct + $countSoldOutProduct,
         ]);
     }
 
@@ -136,5 +139,3 @@ class ProductListingLoaderSubscriber implements EventSubscriberInterface
         ]);
     }
 }
-
-
