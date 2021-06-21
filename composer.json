@@ -1,9 +1,16 @@
 {
     "name": "sas/product-sold-out-to-end",
-    "description": "A shopware 6 plugin to display products sold out badge to end user",
+    "description": "A shopware 6 plugin to display products which are sold out always at the end of the listing.",
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
     "license": "MIT",
+    "authors":[
+        {
+            "name":"Shape & Shift",
+            "role":"Manufacturer",
+            "homepage":"https://shapeandshift.dev"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "SasProductSoldOutToEnd\\": "src/"
@@ -11,14 +18,14 @@
     },
     "extra": {
         "shopware-plugin-class": "SasProductSoldOutToEnd\\SasProductSoldOutToEnd",
-        "label": {
-            "de-DE": "Anzeige der verkauften Produkte mit Plakette an den Endverbraucher",
-            "en-GB": "Display products sold out badge to end user"
-        },
         "plugin-icon": "src/Resources/config/plugin.png",
+        "label": {
+            "de-DE": "Ausverkaufte Produkte ans Ende.",
+            "en-GB": "Sold out products to the end."
+        },
         "description": {
-            "de-DE": "Image Hotspot Plugin for Shopware 6",
-            "en-GB": "Image Hotspot Plugin for Shopware 6"
+            "de-DE": "Ausverkaufte Produkte werden immer ans Ende des Listings oder der Suchergebnisse angehangen.",
+            "en-GB": "Put sold out products always at the end of the listing and search results."
         },
         "manufacturerLink": {
             "de-DE": "https://shapeandshift.dev",
