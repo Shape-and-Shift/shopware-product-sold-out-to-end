@@ -1,6 +1,6 @@
 {
     "name": "sas/product-sold-out-to-end",
-    "description": "A shopware 6 plugin to display products which are sold out always at the end of the listing.",
+    "description": "Sold out products always to the end of the listing",
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
     "license": "MIT",
@@ -20,12 +20,12 @@
         "shopware-plugin-class": "SasProductSoldOutToEnd\\SasProductSoldOutToEnd",
         "plugin-icon": "src/Resources/config/plugin.png",
         "label": {
-            "de-DE": "Ausverkaufte Produkte ans Ende.",
-            "en-GB": "Sold out products to the end."
+            "de-DE": "Ausverkaufte Produkte immer ans Endes des Listings",
+            "en-GB": "Sold out products always to the end of the listing"
         },
         "description": {
-            "de-DE": "Ausverkaufte Produkte werden immer ans Ende des Listings oder der Suchergebnisse angehangen.",
-            "en-GB": "Put sold out products always at the end of the listing and search results."
+            "de-DE": "Mit diesem Plugin hast du die Moeglichkeit ausverkaufte Produkte immer ans Ende des Produkt Listings zu schieben. Auch in den Suchergebnissen sind ausverkaufte Produkte immer am Ende.",
+            "en-GB": "PWith this plugin you have the possibility to push sold out products always to the end of the product listing. Also in the search results sold out products are always at the end."
         },
         "manufacturerLink": {
             "de-DE": "https://shapeandshift.dev",
