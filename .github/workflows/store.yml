@@ -2,7 +2,7 @@ name: Store
 on:
     push:
         branches:
-            - 'main'
+            - 'master'
         tags:
             - '*'
 
