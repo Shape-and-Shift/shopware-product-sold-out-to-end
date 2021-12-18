@@ -1,3 +1,7 @@
+# 1.0.3
+
+- Behebung eines Fehlers, wenn alle gefundenen Produkte ausverkauft sind
+
 # 1.0.2
 
 - Branch Name in GitHub workflow geaendert

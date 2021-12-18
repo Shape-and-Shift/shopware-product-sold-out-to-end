@@ -1,3 +1,7 @@
+# 1.0.3
+
+- Fix a bug when all found products are sold-out
+
 # 1.0.2
 
 - Changed branch name in workflow

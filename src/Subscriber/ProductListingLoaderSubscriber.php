@@ -86,7 +86,7 @@ class ProductListingLoaderSubscriber implements EventSubscriberInterface
         /** @var CountResult|null $countNotSoldOutAgg */
         $countNotSoldOutAgg = $result->getAggregations()->get(self::COUNT_PRODUCT_NOT_SOLD_OUT_AGGREGATION);
 
-        if ($countNotSoldOutAgg === null || $countNotSoldOutAgg->getCount() === 0) {
+        if ($countNotSoldOutAgg === null) {
             return;
         }
 
